@@ -79,6 +79,7 @@ public class inputView extends FrameLayout {
     }
 
     public String getInputStr(){
+        //return mEtInput.getText().toString();
         return mEtInput.getText().toString().trim();
     }
 }

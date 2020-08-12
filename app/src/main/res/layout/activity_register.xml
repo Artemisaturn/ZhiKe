@@ -9,22 +9,49 @@
     tools:context="com.example.ZhiKe.activities.LoginActivity">
 
     <include layout="@layout/nav_bar"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <ImageView
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+        <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@mipmap/logo1"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="@dimen/marginSize"/>
+        android:layout_marginTop="10dp"/>
+
+        <com.example.ZhiKe.views.inputView
+        android:id="@+id/collegeName"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/inputViewHeight"
+        android:layout_marginTop="1dp"
+        app:input_icon="@mipmap/location"
+        app:input_hint="请输入学校编号"
+        app:is_password="false"/>
+    <View
+        style="@style/line"/>
+    <com.example.ZhiKe.views.inputView
+        android:id="@+id/studentId"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/inputViewHeight"
+        app:input_icon="@mipmap/id"
+        app:input_hint="请输入学号"
+        app:is_password="false"/>
+
+    <View
+        style="@style/line"/>
 
     <com.example.ZhiKe.views.inputView
         android:id="@+id/input_phone"
         android:layout_width="match_parent"
         android:layout_height="@dimen/inputViewHeight"
-        android:layout_marginTop="@dimen/marginSize"
-        app:input_icon="@mipmap/phone"
         app:input_hint="请输入手机号"
-        app:is_password="false"/>
+        app:input_icon="@mipmap/mobile"
+        app:is_password="false" />
 
     <View
         style="@style/line"/>
@@ -33,7 +60,7 @@
         android:id="@+id/input_password"
         android:layout_width="match_parent"
         android:layout_height="@dimen/inputViewHeight"
-        app:input_icon="@mipmap/password"
+        app:input_icon="@mipmap/lock"
         app:input_hint="请输入密码"
         app:is_password="true"/>
 
@@ -44,7 +71,7 @@
         android:id="@+id/input_password_confirm"
         android:layout_width="match_parent"
         android:layout_height="@dimen/inputViewHeight"
-        app:input_icon="@mipmap/password"
+        app:input_icon="@mipmap/lock"
         app:input_hint="请确认密码"
         app:is_password="true"/>
 
@@ -54,8 +81,12 @@
 
     <Button
         style="@style/commitBtn"
+        android:id="@+id/registerBtn"
         android:text="注  册"
         android:layout_marginTop="@dimen/marginSize"
+
         android:onClick="onRegisterClick"/>
+        </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.ZhiKe.activities.ClassroomStatusActivity">
+
+    <include layout="@layout/nav_bar"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="@dimen/marginSize"
+                android:layout_marginLeft="@dimen/marginSize"
+                android:layout_marginBottom="@dimen/marginSize">
+
+                <View
+                    android:layout_width="4dp"
+                    android:layout_height="25dp"
+                    android:background="@color/mainColor"/>
+
+                <TextView
+                    android:id="@+id/statusTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="选择自习室所在建筑"
+                    android:textColor="@color/titleColor"
+                    android:textSize="@dimen/titleSize"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="@dimen/marginTabSize"/>
+
+
+            </LinearLayout>
+            <com.github.mikephil.charting.charts.PieChart
+                android:id="@+id/pieChart"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"></com.github.mikephil.charting.charts.PieChart>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="@dimen/marginSize"
+                android:layout_marginLeft="@dimen/marginSize"
+                android:layout_marginBottom="@dimen/marginSize">
+
+                <View
+                    android:layout_width="4dp"
+                    android:layout_height="25dp"
+                    android:background="@color/mainColor"/>
+
+                <TextView
+                    android:id="@+id/predictTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="未来使用情况预测"
+                    android:textColor="@color/titleColor"
+                    android:textSize="@dimen/titleSize"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="@dimen/marginTabSize"/>
+
+
+            </LinearLayout>
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/predictChart"
+                android:layout_width="match_parent"
+                android:layout_height="265dp">
+
+            </com.github.mikephil.charting.charts.LineChart>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

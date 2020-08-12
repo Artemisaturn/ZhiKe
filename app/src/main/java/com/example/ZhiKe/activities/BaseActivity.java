@@ -3,16 +3,22 @@ package com.example.ZhiKe.activities;
 import android.app.Activity;
 import android.content.Intent;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.IdRes;
+import androidx.drawerlayout.widget.DrawerLayout;
 
-    import com.example.ZhiKe.R;
+import com.example.ZhiKe.R;
+import com.example.ZhiKe.helps.UserHelper;
+import com.example.ZhiKe.utils.UserUtils;
 
 public class BaseActivity extends Activity {
-    private ImageView mIvBack,mIvme;
-    private TextView mTvTitle;
+    private ImageView mIvBack, mIvme;
+    private TextView mTvTitle, mTvUser, mPassword,mListClass;
+    private DrawerLayout drawerLayout;
+    private Button button;
 
     /**
      * findViewById
@@ -54,5 +60,33 @@ public class BaseActivity extends Activity {
                 startActivity(new Intent(BaseActivity.this,MeActivity.class));
             }
         });
+    }
+    /**
+     * 初始化DrawerLayout
+     */
+    protected void initDrawer() {
+        mPassword = fd(R.id.passwordchange);
+        mPassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(BaseActivity.this, ChangePasswordActivity.class));
+            }
+        });
+        mListClass=fd(R.id.checkClass);
+        mListClass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(BaseActivity.this, ListCourseActivity.class));
+            }
+        });
+        button = fd(R.id.logout);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                UserUtils.logout(BaseActivity.this);
+            }
+        });
+        mTvUser = fd(R.id.tv_user);
+        mTvUser.setText("用户名：" + UserHelper.getInstance().getPhone());
     }
 }

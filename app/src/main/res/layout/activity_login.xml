@@ -22,7 +22,7 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/inputViewHeight"
         android:layout_marginTop="@dimen/marginSize"
-        app:input_icon="@mipmap/phone"
+        app:input_icon="@mipmap/mobile"
         app:input_hint="手机号"
         app:is_password="false"/>
 
@@ -33,9 +33,9 @@
         android:id="@+id/input_password"
         android:layout_width="match_parent"
         android:layout_height="@dimen/inputViewHeight"
-        app:input_icon="@mipmap/password"
         app:input_hint="密码"
-        app:is_password="true"/>
+        app:input_icon="@mipmap/lock"
+        app:is_password="true" />
 
     <View
         style="@style/line"/>

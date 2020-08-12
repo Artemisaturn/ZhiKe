@@ -10,27 +10,46 @@
 
     <include layout="@layout/nav_bar"/>
 
+
     <TextView
+        android:id="@+id/tv_user"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
-        android:text="用户名"
+        android:text="用户名："
         android:textSize="@dimen/titleSize"
         android:textStyle="bold"
         android:layout_margin="@dimen/marginSize"/>
 
     <TextView
+        android:id="@+id/passwordchange"
         android:layout_width="match_parent"
         android:layout_height="@dimen/itemHeight"
         android:layout_marginTop="@dimen/marginSize"
         android:text="修改密码"
-        android:textSize="@dimen/infoSize"
+        android:textSize="18dp"
+        android:textColor="@color/meSelectColor"
         android:paddingLeft="@dimen/marginSize"
         android:gravity="center_vertical"
         android:onClick="onChangeClick"
         android:background="@drawable/item_commit_select"/>
+    <View
+        style="@style/line"/>
+    <TextView
+        android:id="@+id/checkClass"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/itemHeight"
+        android:layout_marginTop="2dp"
+        android:text="查看我的课表"
+        android:textSize="18dp"
+        android:textColor="@color/meSelectColor"
+        android:paddingLeft="@dimen/marginSize"
+        android:gravity="center_vertical"
+        android:onClick="onCheckClick"
+        android:background="@drawable/item_commit_select"/>
 
     <Button
+        android:id="@+id/logout"
         style="@style/commitBtn"
         android:text="退出登录"
         android:layout_marginTop="@dimen/marginSize"

@@ -8,9 +8,9 @@
     tools:context="com.example.ZhiKe.activities.WelcomeActivity">
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@mipmap/logo1"
-        android:layout_gravity="center"/>
+        android:layout_width="197dp"
+        android:layout_height="206dp"
+        android:layout_gravity="center|center_horizontal"
+        android:src="@mipmap/logo1" />
 
 </FrameLayout>
